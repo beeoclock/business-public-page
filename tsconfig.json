@@ -19,7 +19,30 @@
 		"importHelpers": true,
 		"target": "ES2022",
 		"module": "ES2022",
-		"lib": ["ES2022", "dom"]
+		"lib": ["ES2022", "dom"],
+		"paths": {
+			"@src/*": [
+				"./src/*"
+			  ],
+			  "@environments/*": [
+				"./src/environments/*"
+			  ],
+			  "@assets/*": [
+				"./src/assets/*"
+			  ],
+			  "@scss/*": [
+				"./src/assets/scss/*"
+			  ],
+			  "@icon/*": [
+				"./src/assets/icon/*"
+			  ],
+			  "@app/*": [
+				"./src/app/*"
+			  ],
+			  "@module/*": [
+				"./src/module/*"
+			  ]
+		}
 	},
 	"angularCompilerOptions": {
 		"enableI18nLegacyMessageIdFormat": false,

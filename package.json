@@ -12,6 +12,21 @@
     "lint": "ng lint"
   },
   "private": true,
+  "jest": {
+      "preset": "jest-preset-angular",
+      "setupFilesAfterEnv": [
+          "<rootDir>/setup-jest.ts"
+      ],
+      "moduleNameMapper": {
+        "@src/(.*)": "<rootDir>/src/$1",
+        "@environment/(.*)": "<rootDir>/src/environment/$1",
+        "@assets/(.*)": "<rootDir>/src/assets/$1",
+        "@scss/(.*)": "<rootDir>/src/assets/scss/$1",
+        "@icon/(.*)": "<rootDir>/src/assets/icon/$1",
+        "@app/(.*)": "<rootDir>/src/app/$1",
+        "@module/(.*)": "<rootDir>/src/module/$1"
+      }
+  },
   "dependencies": {
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
