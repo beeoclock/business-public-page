@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "dev-business-public-page",
-    "public": "dist/business-public-page/browser",
+    "public": "dist/browser",
     "ignore": [
       "**/firebase/**",
       "**/.*",
