@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "beeoclock"
+  },
+  "targets": {
+    "business-public-page": {
+      "hosting": {
+        "business-public-page": [
+          "business-public-page"
+        ]
+      }
+    },
+    "dev-business-public-page": {
+      "hosting": {
+        "dev-business-public-page": [
+          "dev-business-public-page"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

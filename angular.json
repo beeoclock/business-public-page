@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/business-public-page",
+						"outputPath": "dist",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
 						"polyfills": ["zone.js", "@angular/localize/init"],
@@ -51,6 +51,12 @@
 									"maximumError": "4kB"
 								}
 							],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ],
 							"outputHashing": "all"
 						},
 						"development": {
