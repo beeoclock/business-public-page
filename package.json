@@ -3,13 +3,21 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4201",
+    "start:develop": "ng serve --configuration develop --port 4201",
+    "start:local": "ng serve --configuration local --port 4201",
+    "start:production": "ng serve --configuration production --port 4201",
+    "start:external": "ng serve --port 4201 --host 0.0.0.0 --disable-host-check",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "serve:ssr:business-public-page": "node dist/business-public-page/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:firebase:develop": "ng build --configuration develop --output-path=./firebase/develop/dist/client-app",
+    "build:firebase:production": "ng build --configuration production --output-path=./firebase/production/dist/client-app",
+    "prepare": "ts-patch install && typia patch",
+    "prettier": "npx prettier --write ."
   },
   "private": true,
   "jest": {
