@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="header-content">
+    <div class="header-left">
+      <h1>{{ shopProperties.name }}</h1>
+      <p>
+        <span class="status" [class.closed]="shopProperties.status === 'Closed'">{{ shopProperties.status }}</span>
+        opens soon at {{ shopProperties.opensAt }}
+      </p>
+      <p>{{ shopProperties.address }}</p>
+    </div>
+    <div class="header-right">
+      <button class="nav-btn">Services</button>
+      <button class="nav-btn">Products</button>
+      <button class="nav-btn">About us</button>
+    </div>
+  </div>
+</header>

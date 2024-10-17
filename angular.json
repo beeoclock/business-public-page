@@ -26,7 +26,8 @@
 						"assets": [
 							{
 								"glob": "**/*",
-								"input": "public"
+                "input": "src/assets",
+                "output": "/assets/"
 							}
 						],
 						"styles": ["src/styles.scss"],
@@ -98,6 +99,9 @@
 		}
 	},
 	"cli": {
-		"schematicCollections": ["@angular-eslint/schematics"]
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ],
+    "analytics": "ce90427d-dc3d-45ef-8c8e-41bb8e542131"
 	}
 }

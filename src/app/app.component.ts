@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { environment } from '@environments/environment';
+import { AppServiceCardCombinedComponent } from '@src/component/combined/service-card-combined-component/app-service-card-combined-component';
+import { AppHomeHeaderComponent } from '@src/component/combined/header-component/app-home-header-component';
 
 @Component({
 	selector: 'app-root',
 	standalone: true,
-	imports: [RouterOutlet],
+	imports: [RouterOutlet, AppServiceCardCombinedComponent, AppHomeHeaderComponent],
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',
 })
