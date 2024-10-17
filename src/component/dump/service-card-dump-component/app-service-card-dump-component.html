@@ -1,13 +1,13 @@
-<div class="service-card">
-  <div class="service-image">
-    <img [src]="properties.src" alt="Service Image">
+<div class="bg-white rounded-lg shadow-md overflow-hidden mb-5 flex items-center p-4">
+  <div class="w-20 h-20 rounded-lg overflow-hidden mr-4">
+    <img [src]="properties.src" alt="Service Image" class="w-full h-full object-cover">
   </div>
-  <div class="service-info">
-    <h3>{{ properties.title }}</h3>
-    <p>{{ properties.price }}</p>
-    <p>{{ properties.duration }}</p>
+  <div class="flex-1">
+    <h3 class="m-0 text-lg">{{ properties.title }}</h3>
+    <p class="m-1 text-black">{{ properties.price }}</p>
+    <p class="m-1 text-black">{{ properties.duration }}</p>
   </div>
-  <div class="quantity-controls">
-    <button class="quantity-btn">+</button>
+  <div class="flex items-center">
+    <button class="border-none bg-gray-200 rounded-full w-8 h-8 text-2xl flex justify-center items-center cursor-pointer">+</button>
   </div>
 </div>

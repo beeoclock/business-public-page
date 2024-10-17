@@ -11,7 +11,6 @@ import {
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app-home-header-dump-component.html',
-	styleUrls: ['./app-home-header-dump-component.css'],
 })
 export class AppHomeHeaderDumpComponent {
 	@Input({ required: true })

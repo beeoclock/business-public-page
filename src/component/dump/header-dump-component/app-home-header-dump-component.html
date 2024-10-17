@@ -1,17 +1,19 @@
-<header class="header">
-  <div class="header-content">
-    <div class="header-left">
-      <h1>{{ shopProperties.name }}</h1>
-      <p>
-        <span class="status" [class.closed]="shopProperties.status === 'Closed'">{{ shopProperties.status }}</span>
-        opens soon at {{ shopProperties.opensAt }}
-      </p>
-      <p>{{ shopProperties.address }}</p>
-    </div>
-    <div class="header-right">
-      <button class="nav-btn">Services</button>
-      <button class="nav-btn">Products</button>
-      <button class="nav-btn">About us</button>
-    </div>
+<header class="flex flex-col items-center  p-5 shadow">
+  <div class="header-left flex flex-col mb-4">
+    <h1 class="m-0 text-2xl font-bold">{{ shopProperties.name }}</h1>
+    <p class="m-1">
+      <span class="font-bold" [class.text-red-500]="shopProperties.status === 'Closed'">{{ shopProperties.status }}</span>
+      opens soon at {{ shopProperties.opensAt }}
+    </p>
+    <p>
+      <a [href]="'https://www.google.com/maps/search/?api=1&query=' + shopProperties.address" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:underline">
+        {{ shopProperties.address }}
+      </a>
+    </p>
+  </div>
+  <div class="header-right flex gap-2">
+    <button class="nav-btn bg-black text-white rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-600">Services</button>
+    <button class="nav-btn bg-white text-gray-800 rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-200 border border-transparent">Products</button>
+    <button class="nav-btn bg-white text-gray-800 rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-200 border border-transparent">About us</button>
   </div>
 </header>
