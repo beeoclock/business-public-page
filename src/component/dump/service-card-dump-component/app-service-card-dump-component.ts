@@ -4,6 +4,7 @@ import {
 	Input,
 	ViewEncapsulation,
 } from '@angular/core';
+import { IconComponent } from '@src/component/adapter/icon/icon.component';
 
 @Component({
 	selector: 'app-service-card-dump-component',
@@ -11,8 +12,8 @@ import {
 	templateUrl: './app-service-card-dump-component.html',
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
+	imports: [IconComponent],
 })
-
 export class AppServiceCardDumpComponent {
 	@Input({ required: true })
 	properties!: {
