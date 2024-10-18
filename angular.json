@@ -13,6 +13,20 @@
 			"root": "",
 			"sourceRoot": "src",
 			"prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "da": {
+            "translation": "src/locale/messages.da.xlf"
+          },
+          "uk": {
+            "translation": "src/locale/messages.uk.xlf"
+          },
+          "pl": {
+            "translation": "src/locale/messages.pl.xlf"
+          }
+        }
+      },
 			"architect": {
 				"build": {
 					"builder": "@angular-devkit/build-angular:application",
@@ -36,9 +50,28 @@
 						"prerender": true,
 						"ssr": {
 							"entry": "server.ts"
-						}
+						},
+            "localize": true,
+            "i18nMissingTranslation": "warning"
 					},
 					"configurations": {
+            "prepare_production_base": {
+              "localize": false,
+              "deleteOutputPath": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
 						"production": {
 							"budgets": [
 								{
@@ -70,8 +103,33 @@
 									"with": "src/environments/environment.development.ts"
 								}
 							]
-						}
-					},
+						},
+            "prepare_development_base": {
+              "localize": false,
+              "deleteOutputPath": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
+            },
+            "en-US": {
+              "localize": ["en-US"]
+            },
+            "pl": {
+              "localize": ["pl"]
+            },
+            "da": {
+              "localize": ["da"]
+            },
+            "uk": {
+              "localize": ["uk"]
+            }
+          },
 					"defaultConfiguration": "production"
 				},
 				"serve": {
@@ -82,13 +140,35 @@
 						},
 						"development": {
 							"buildTarget": "business-public-page:build:development"
-						}
+						},
+            "en-US": {
+              "buildTarget": "angular-i18n-example:build:development,en-US"
+            },
+            "da": {
+              "buildTarget": "angular-i18n-example:build:development,da"
+            },
+            "uk": {
+              "buildTarget": "angular-i18n-example:build:development,uk"
+            },
+            "pl": {
+              "buildTarget": "angular-i18n-example:build:development,pl"
+            }
 					},
 					"defaultConfiguration": "development"
 				},
-				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
-				},
+        "extract-i18n": {
+          "builder": "ng-extract-i18n-merge:ng-extract-i18n-merge",
+          "options": {
+            "buildTarget": "business-public-page:build",
+            "format": "xlf2",
+            "outputPath": "src/locale",
+            "targetFiles": [
+              "messages.da.xlf",
+              "messages.uk.xlf",
+              "messages.pl.xlf"
+            ]
+          }
+        },
 				"lint": {
 					"builder": "@angular-eslint/builder:lint",
 					"options": {
