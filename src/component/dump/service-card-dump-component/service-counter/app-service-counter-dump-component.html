@@ -1,0 +1,9 @@
+<div class="flex items-center space-x-2">
+  <button *ngIf="count > 0" (click)="decrementCount()" class="bg-transparent border-none cursor-pointer p-1 focus:outline-none">
+    <app-icon name="bootstrapDashCircle"></app-icon>
+  </button>
+  <span class="min-w-[2rem] inline-block text-center">{{ count }}</span>
+  <button (click)="incrementCount()" class="bg-transparent border-none cursor-pointer p-1 focus:outline-none">
+    <app-icon name="bootstrapPlusCircle"></app-icon>
+  </button>
+</div>
