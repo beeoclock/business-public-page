@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
-  <file id="ngi18n" original="ng.template"/>
+  <file id="ngi18n" original="ng.template">
+    <unit id="myId.first">
+      <segment>
+        <source>Hello world1</source>
+      </segment>
+    </unit>
+    <unit id="7143579180750436311">
+      <segment>
+        <source>Services</source>
+      </segment>
+    </unit>
+    <unit id="187187500641108332">
+      <segment>
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ shopProperties.status }}"/>
+        </source>
+      </segment>
+    </unit>
+    <unit id="2501489806101473286">
+      <segment>
+        <source>About us</source>
+      </segment>
+    </unit>
+    <unit id="6707361102856436710">
+      <segment>
+        <source>Products</source>
+      </segment>
+    </unit>
+    <unit id="6226288596621978640">
+      <segment>
+        <source>All rights reserved © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/></source>
+      </segment>
+    </unit>
+    <unit id="664573589261423471">
+      <segment>
+        <source>Terms and Conditions</source>
+      </segment>
+    </unit>
+    <unit id="8439955599488894226">
+      <segment>
+        <source>Privacy Policy</source>
+      </segment>
+    </unit>
+  </file>
 </xliff>

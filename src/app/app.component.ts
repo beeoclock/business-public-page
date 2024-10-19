@@ -22,5 +22,6 @@ export class AppComponent implements OnInit {
 
 	public ngOnInit(): void {
 		console.log(environment);
+    console.log($localize`:@@myId.first:Hello world1`)
 	}
 }

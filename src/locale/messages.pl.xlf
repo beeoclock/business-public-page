@@ -1,3 +1,56 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US" trgLang="pl">
-  <file id="ngi18n" original="ng.template"/>
+  <file id="ngi18n" original="ng.template">
+    <unit id="myId.first">
+      <segment state="initial">
+        <source>Hello world1</source>
+        <target>Czesc swiat</target>
+      </segment>
+    </unit>
+    <unit id="7143579180750436311">
+      <segment state="initial">
+        <source>Services</source>
+        <target>Usługi</target>
+      </segment>
+    </unit>
+    <unit id="187187500641108332">
+      <segment state="initial">
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ shopProperties.status }}"/>
+        </source>
+        <target>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ shopProperties.status }}"/>
+        </target>
+      </segment>
+    </unit>
+    <unit id="6707361102856436710">
+      <segment state="initial">
+        <source>Products</source>
+        <target>Produkty</target>
+      </segment>
+    </unit>
+    <unit id="2501489806101473286">
+      <segment state="initial">
+        <source>About us</source>
+        <target>O nas</target>
+      </segment>
+    </unit>
+    <unit id="664573589261423471">
+      <segment state="initial">
+        <source>Terms and Conditions</source>
+        <target>Zasady i warunki</target>
+      </segment>
+    </unit>
+    <unit id="8439955599488894226">
+      <segment state="initial">
+        <source>Privacy Policy</source>
+        <target>Polityka Prywatności</target>
+      </segment>
+    </unit>
+    <unit id="6226288596621978640">
+      <segment state="initial">
+        <source>All rights reserved © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/></source>
+        <target>Wszystkie prawa zastrzeżone © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/></target>
+      </segment>
+    </unit>
+  </file>
 </xliff>

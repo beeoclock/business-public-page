@@ -117,9 +117,6 @@
                 }
               ]
             },
-            "en-US": {
-              "localize": ["en-US"]
-            },
             "pl": {
               "localize": ["pl"]
             },
@@ -142,16 +139,16 @@
 							"buildTarget": "business-public-page:build:development"
 						},
             "en-US": {
-              "buildTarget": "angular-i18n-example:build:development,en-US"
+              "buildTarget": "business-public-page:build:development,en-US"
             },
             "da": {
-              "buildTarget": "angular-i18n-example:build:development,da"
+              "buildTarget": "business-public-page:build:development,da"
             },
             "uk": {
-              "buildTarget": "angular-i18n-example:build:development,uk"
+              "buildTarget": "business-public-page:build:development,uk"
             },
             "pl": {
-              "buildTarget": "angular-i18n-example:build:development,pl"
+              "buildTarget": "business-public-page:build:development,pl"
             }
 					},
 					"defaultConfiguration": "development"

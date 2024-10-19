@@ -2,7 +2,7 @@
   <div class="header-left flex flex-col mb-4">
     <h1 class="m-0 text-2xl font-bold">{{ shopProperties.name }}</h1>
     <p class="m-1">
-      <span class="font-bold" [class.text-red-500]="shopProperties.status === 'Closed'">{{ shopProperties.status }}</span>
+      <span class="font-bold" i18n [class.text-red-500]="shopProperties.status === 'Closed'">{{ shopProperties.status }}</span>
       opens soon at {{ shopProperties.opensAt }}
     </p>
     <p>
@@ -12,8 +12,8 @@
     </p>
   </div>
   <div class="header-right flex gap-2">
-    <button class="nav-btn bg-black text-white rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-600">Services</button>
-    <button class="nav-btn bg-white text-gray-800 rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-200 border border-transparent">Products</button>
-    <button class="nav-btn bg-white text-gray-800 rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-200 border border-transparent">About us</button>
+    <button class="nav-btn bg-black text-white rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-600" i18n>Services</button>
+    <button class="nav-btn bg-white text-gray-800 rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-200 border border-transparent" i18n>Products</button>
+    <button class="nav-btn bg-white text-gray-800 rounded-full py-2 px-4 text-base cursor-pointer hover:bg-gray-200 border border-transparent" i18n>About us</button>
   </div>
 </header>
