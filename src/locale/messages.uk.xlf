@@ -3,13 +3,13 @@
     <unit id="myId.first">
       <segment state="initial">
         <source>Hello world1</source>
-        <target>Privit svit</target>
+        <target>Привіт, світ!</target> <!-- Tłumaczenie na ukraiński -->
       </segment>
     </unit>
     <unit id="7143579180750436311">
       <segment state="initial">
         <source>Services</source>
-        <target>Services</target>
+        <target>Послуги</target> <!-- Tłumaczenie na ukraiński -->
       </segment>
     </unit>
     <unit id="187187500641108332">
@@ -25,31 +25,31 @@
     <unit id="6707361102856436710">
       <segment state="initial">
         <source>Products</source>
-        <target>Products</target>
+        <target>Продукти</target>
       </segment>
     </unit>
     <unit id="2501489806101473286">
       <segment state="initial">
         <source>About us</source>
-        <target>About us</target>
+        <target>Про нас</target>
       </segment>
     </unit>
     <unit id="664573589261423471">
       <segment state="initial">
         <source>Terms and Conditions</source>
-        <target>Terms and Conditions</target>
+        <target>Умови та положення</target>
       </segment>
     </unit>
     <unit id="8439955599488894226">
       <segment state="initial">
         <source>Privacy Policy</source>
-        <target>Privacy Policy</target>
+        <target>Політика конфіденційності</target>
       </segment>
     </unit>
     <unit id="6226288596621978640">
       <segment state="initial">
         <source>All rights reserved © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/></source>
-        <target>All rights reserved © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/></target>
+        <target>Усі права захищено © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/></target>
       </segment>
     </unit>
   </file>
