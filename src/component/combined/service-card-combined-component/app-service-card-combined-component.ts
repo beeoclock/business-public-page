@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppServiceCardDumpComponent } from '@src/component/dump/service-card-dump-component/app-service-card-dump-component';
-import { AppServiceCounterDumpComponent } from '@src/component/dump/service-card-dump-component/service-counter/app-service-counter-dump-component';
+import { CounterFormControl } from '@src/component/dump/service-card-dump-component/service-counter/counter.form-control';
 
 @Component({
   selector: 'app-service-card-combined-component',
   standalone: true,
-  imports: [NgFor, AppServiceCardDumpComponent, AppServiceCounterDumpComponent],
+  imports: [NgFor, AppServiceCardDumpComponent, CounterFormControl],
   template: `
     <div *ngFor="let property of properties">
       <app-service-card-dump-component [properties]="property"></app-service-card-dump-component>
