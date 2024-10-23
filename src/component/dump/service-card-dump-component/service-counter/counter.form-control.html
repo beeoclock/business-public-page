@@ -1,11 +1,11 @@
-<div class="flex items-center space-x-2">
+<div class="flex items-center space-x-2 justify-start">
   @if (counter) {
     <button (click)="decrementCount()" class="bg-transparent border-none cursor-pointer p-1 focus:outline-none">
-      <app-icon name="bootstrapDashCircle"/>
+      <app-icon name="bootstrapDashCircle" style="font-size: 2rem"></app-icon>
     </button>
-    <span class="min-w-[2rem] inline-block text-center">{{ counter }}</span>
+    <span class="min-w-[2rem] inline-block text-3xl text-center">{{ counter }}</span>
   }
   <button (click)="incrementCount()" class="bg-transparent border-none cursor-pointer p-1 focus:outline-none">
-    <app-icon name="bootstrapPlusCircle"/>
+    <app-icon name="bootstrapPlusCircle" style="font-size: 2rem"></app-icon>
   </button>
 </div>

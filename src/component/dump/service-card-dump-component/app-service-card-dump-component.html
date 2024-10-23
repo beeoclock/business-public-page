@@ -3,12 +3,12 @@
     <img [src]="properties.src" alt="Service Image" class="w-full h-full object-cover">
   </div>
   <div class="flex-1">
-    <h3 class="m-0 text-lg">{{ properties.title }}</h3>
-    <p class="m-1 text-black">{{ properties.price }}</p>
+    <h3 class="m-0.5 text-base font-bold">{{ properties.title }}</h3>
+    <p class="m-1 font-medium text-black">{{ properties.price }}</p>
     <p class="m-1 text-black">{{ properties.duration }}</p>
   </div>
   <div class="flex">
-    <div class="w-12 h-12 flex justify-center items-center">
+    <div class="w-auto h-auto flex justify-center items-center">
       <app-counter-form-control [formControl]="counterFormControl"/>
     </div>
   </div>
