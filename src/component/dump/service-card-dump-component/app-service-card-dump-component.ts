@@ -5,7 +5,7 @@ import {
 	ViewEncapsulation,
 } from '@angular/core';
 import { IconComponent } from '@src/component/adapter/icon/icon.component';
-import { CounterFormControl } from '@src/component/dump/service-card-dump-component/service-counter/counter.form-control';
+import { CounterFormControl } from '@src/component/dump/service-card-dump-component/counter/counter.form-control';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({

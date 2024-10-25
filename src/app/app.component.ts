@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { environment } from '@environments/environment';
 import { AppServiceCardCombinedComponent } from '@src/component/combined/service-card-combined-component/app-service-card-combined-component';
@@ -15,7 +15,7 @@ import { AppFooterComponent } from '@src/component/combined/footer-component/app
 		AppFooterComponent,
 	],
 	templateUrl: './app.component.html',
-	styleUrl: './app.component.scss',
+	encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
 	title = 'business-public-page';

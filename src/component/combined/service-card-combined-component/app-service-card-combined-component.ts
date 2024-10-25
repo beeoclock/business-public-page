@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppServiceCardDumpComponent } from '@src/component/dump/service-card-dump-component/app-service-card-dump-component';
-import { CounterFormControl } from '@src/component/dump/service-card-dump-component/service-counter/counter.form-control';
+import { CounterFormControl } from '@src/component/dump/service-card-dump-component/counter/counter.form-control';
 
 @Component({
   selector: 'app-service-card-combined-component',
