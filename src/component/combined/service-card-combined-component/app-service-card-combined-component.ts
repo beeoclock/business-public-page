@@ -8,8 +8,10 @@ import { CounterFormControl } from '@src/component/dump/service-card-dump-compon
   standalone: true,
   imports: [NgFor, AppServiceCardDumpComponent, CounterFormControl],
   template: `
+    <div>
     <div *ngFor="let property of properties">
       <app-service-card-dump-component [properties]="property"></app-service-card-dump-component>
+    </div>
     </div>
   `,
   encapsulation: ViewEncapsulation.None,

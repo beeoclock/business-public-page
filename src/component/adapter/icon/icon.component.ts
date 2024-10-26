@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from "@angular/core";
-import {NgIconComponent, provideIcons} from "@ng-icons/core";
+import { NgIconComponent, provideIcons, provideNgIconsConfig } from '@ng-icons/core';
 import { bootstrapDashCircle, bootstrapPlusCircle } from '@ng-icons/bootstrap-icons';
 
 const bootstrapIcons = {
@@ -24,11 +24,16 @@ export type IconNameType =
   imports: [
     NgIconComponent
   ],
+
   viewProviders: [
     provideIcons({
       ...bootstrapIcons,
-    })
-  ]
+    }),
+    provideNgIconsConfig({
+      size: '2em',
+    }),
+  ],
+
 })
 export class IconComponent {
 
