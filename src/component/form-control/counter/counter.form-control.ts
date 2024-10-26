@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef } from '@angular/core';
 import { IconComponent } from '@src/component/adapter/icon/icon.component';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -17,38 +17,38 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 	],
 })
 export class CounterFormControl implements ControlValueAccessor {
+	protected counter = 0;
 
-  protected counter = 0;
-
-  private onChange!: (value: number) => void;
-  private onTouched!: () => void;
+	private onChange!: (value: number) => void;
+	private onTouched!: () => void;
 
 	writeValue(value: number): void {
 		console.log({ value });
 	}
-  public registerOnChange(fn: (value: number) => number): void {
-    this.onChange = fn;
-  }
 
-  public registerOnTouched(fn: () => void): void {
-    this.onTouched = fn;
-  }
+	public registerOnChange(fn: (value: number) => number): void {
+		this.onChange = fn;
+	}
+
+	public registerOnTouched(fn: () => void): void {
+		this.onTouched = fn;
+	}
+
 	setDisabledState?(isDisabled: boolean): void {
 		console.log({ isDisabled });
 	}
 
 	protected incrementCount() {
-    this.counter += 1;
-    this.onChange(this.counter);
-  }
+		this.counter += 1;
+		this.onChange(this.counter);
+	}
 
 	protected decrementCount() {
+		if (this.counter === 0) {
+			return;
+		}
 
-    if (this.counter === 0) {
-      return;
-    }
-
-    this.counter -= 1;
-    this.onChange(this.counter);
-  }
+		this.counter -= 1;
+		this.onChange(this.counter);
+	}
 }
