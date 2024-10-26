@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppServiceCardDumpComponent } from '@src/component/dump/service-card-dump-component/app-service-card-dump-component';
-import { CounterFormControl } from '@src/component/dump/service-card-dump-component/counter/counter.form-control';
+import { CounterFormControl } from '@src/component/form-control/counter/counter.form-control';
 
 @Component({
   selector: 'app-service-card-combined-component',
   standalone: true,
   imports: [NgFor, AppServiceCardDumpComponent, CounterFormControl],
   template: `
-    <div>
-    <div *ngFor="let property of properties">
-      <app-service-card-dump-component [properties]="property"></app-service-card-dump-component>
-    </div>
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-grid-cols-4">
+      <div *ngFor="let property of properties" class="p-6 bg-white rounded-lg shadow-lg transition-transform hover:scale-105">
+        <app-service-card-dump-component [properties]="property"></app-service-card-dump-component>
+      </div>
     </div>
   `,
   encapsulation: ViewEncapsulation.None,
@@ -48,5 +48,17 @@ export class AppServiceCardCombinedComponent {
       price: '80 PLN',
       duration: '30 min',
     },
+    {
+      src: 'http://localhost:4201/assets/photo3.png',
+      title: 'Beard Trim',
+      price: '50 PLN',
+      duration: '15 min',
+    },
+    {
+      src: 'http://localhost:4201/assets/photo2.png',
+      title: 'Kids Haircut',
+      price: '30 PLN',
+      duration: '20 min',
+    }
   ];
 }

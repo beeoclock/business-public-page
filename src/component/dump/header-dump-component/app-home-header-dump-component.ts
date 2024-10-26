@@ -4,6 +4,7 @@ import {
 	Input,
 	ViewEncapsulation,
 } from '@angular/core';
+import { NgStyle } from '@angular/common';
 
 @Component({
 	selector: 'app-home-header-dump-component',
@@ -11,6 +12,7 @@ import {
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app-home-header-dump-component.html',
+	imports: [NgStyle],
 })
 export class AppHomeHeaderDumpComponent {
 	@Input({ required: true })
